@@ -1080,6 +1080,47 @@
   color: #0284c7;
 }
 
+.home-page__toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  gap: 8px;
+}
+
+.home-page__import-btn {
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.home-page__import-btn:hover {
+  background: #0284c7;
+}
+
+.home-page__back-btn {
+  background: none;
+  border: none;
+  color: #0ea5e9;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-top: 20px;
+  transition: color 0.15s ease;
+  font-family: inherit;
+}
+
+.home-page__back-btn:hover {
+  color: #0284c7;
+}
+
 .home-page__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

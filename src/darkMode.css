@@ -580,6 +580,22 @@
   color: #38bdf8;
 }
 
+.app-shell[data-theme="dark"] .home-page__import-btn {
+  background: #0ea5e9;
+}
+
+.app-shell[data-theme="dark"] .home-page__import-btn:hover {
+  background: #0284c7;
+}
+
+.app-shell[data-theme="dark"] .home-page__back-btn {
+  color: #0ea5e9;
+}
+
+.app-shell[data-theme="dark"] .home-page__back-btn:hover {
+  color: #38bdf8;
+}
+
 .app-shell[data-theme="dark"] .home-page__section-title {
   color: #a8acb3;
 }
