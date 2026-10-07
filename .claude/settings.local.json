@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/daniel.kaufman/dc-rack-viewer/.claude)",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Initial commit: dc-rack-viewer 3D data center visualization *)"
+    ]
+  }
+}

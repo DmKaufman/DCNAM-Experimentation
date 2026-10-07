@@ -1,0 +1,727 @@
+/* Dark mode — additive overrides scoped under [data-theme="dark"] on the
+   app root, rather than rewriting the base rules to CSS variables. Lower
+   risk for a UI this size: light mode is untouched, dark mode is a parallel
+   pass over the same selectors.
+
+   Status/accent colors (green/blue/red/orange for port state, heatmap,
+   task urgency, etc.) are intentionally left alone — they already have
+   enough contrast on a dark surface and changing them would break the
+   color language between modes. Only structural surfaces, borders, and
+   neutral text get swapped. */
+
+.app-shell[data-theme="dark"] {
+  background: #14161a;
+  color: #e8e9eb;
+}
+
+/* Left rail */
+
+.app-shell[data-theme="dark"] .left-rail {
+  background: #1c1f24;
+  border-right-color: #2d3138;
+}
+
+.app-shell[data-theme="dark"] .left-rail__item {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .left-rail__item:hover {
+  background: #262a30;
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .left-rail__item--active {
+  background: #3d6fd6;
+  color: #fff;
+}
+
+/* Top bar */
+
+.app-shell[data-theme="dark"] .top-bar {
+  background: #1c1f24;
+  border-bottom-color: #2d3138;
+}
+
+.app-shell[data-theme="dark"] .top-bar__crumb-muted {
+  color: #82868f;
+}
+
+.app-shell[data-theme="dark"] .top-bar__chevron {
+  color: #5a5e66;
+}
+
+.app-shell[data-theme="dark"] .top-bar__title-btn {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .top-bar__title-btn:hover {
+  background: #262a30;
+}
+
+.app-shell[data-theme="dark"] .top-bar__title-btn h1 {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .top-bar__divider,
+.app-shell[data-theme="dark"] .viewer-card__divider,
+.app-shell[data-theme="dark"] .env-hud__divider {
+  background: #33373e;
+}
+
+/* Dropdowns */
+
+.app-shell[data-theme="dark"] .site-dropdown {
+  background: #20242a;
+  border-color: #33373e;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.app-shell[data-theme="dark"] .site-dropdown__label {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .site-dropdown__item:hover {
+  background: #2a2e35;
+}
+
+.app-shell[data-theme="dark"] .site-dropdown__item--active {
+  background: #24344f;
+}
+
+.app-shell[data-theme="dark"] .site-dropdown__name {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .site-dropdown__location {
+  color: #a8acb3;
+}
+
+/* Shared buttons */
+
+.app-shell[data-theme="dark"] .icon-btn {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .icon-btn:hover {
+  background: #262a30;
+}
+
+.app-shell[data-theme="dark"] .pill-btn {
+  background: #20242a;
+  border-color: #33373e;
+  color: #d3d5d9;
+}
+
+.app-shell[data-theme="dark"] .pill-btn:hover {
+  background: #262a30;
+}
+
+.app-shell[data-theme="dark"] .pill-btn--dark {
+  background: #3d6fd6;
+  border-color: #3d6fd6;
+  color: #fff;
+}
+
+.app-shell[data-theme="dark"] .pill-btn--dark:hover {
+  background: #4a7ce0;
+}
+
+.app-shell[data-theme="dark"] .pill-btn--danger {
+  background: #e5484d;
+  border-color: #e5484d;
+  color: #fff;
+}
+
+.app-shell[data-theme="dark"] .pill-btn--danger:hover {
+  background: #d1383d;
+}
+
+/* Viewer card */
+
+.app-shell[data-theme="dark"] .viewer-card {
+  background: #1c1f24;
+  border-color: #2d3138;
+}
+
+.app-shell[data-theme="dark"] .viewer-card__toolbar {
+  border-bottom-color: #262a30;
+}
+
+.app-shell[data-theme="dark"] .viewer-card__title-btn {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .viewer-card__title-btn:hover {
+  background: #262a30;
+}
+
+.app-shell[data-theme="dark"] .viewer-card__title {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .viewer-card__badge {
+  background: #262a30;
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .viewer-card__hint {
+  color: #767b84;
+  border-bottom-color: #24272c;
+}
+
+.app-shell[data-theme="dark"] .viewer-card__stage {
+  background: #12141a;
+}
+
+/* Task / activity cards */
+
+.app-shell[data-theme="dark"] .panel-card {
+  background: #1c1f24;
+  border-color: #2d3138;
+}
+
+.app-shell[data-theme="dark"] .panel-card__header {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .panel-card__header h2 {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .tab-row__label {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .tab-pill {
+  background: #262a30;
+  color: #b4b7bd;
+}
+
+.app-shell[data-theme="dark"] .tab-pill--active {
+  background: #3d6fd6;
+  color: #fff;
+}
+
+.app-shell[data-theme="dark"] .task-item,
+.app-shell[data-theme="dark"] .activity-item-wrap {
+  border-top-color: #262a30;
+}
+
+.app-shell[data-theme="dark"] .task-item__header:hover,
+.app-shell[data-theme="dark"] .activity-item:hover {
+  background: #1f2228;
+}
+
+.app-shell[data-theme="dark"] .task-item__id {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .task-item__title {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .task-item__desc {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .task-item__chevron {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .task-item__detail,
+.app-shell[data-theme="dark"] .activity-item__detail {
+  background: #191c21;
+  border-top-color: #262a30;
+}
+
+.app-shell[data-theme="dark"] .task-item__detail-label,
+.app-shell[data-theme="dark"] .activity-item__detail-grid .task-item__detail-label {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .task-item__checklist-item {
+  color: #c2c4c9;
+}
+
+.app-shell[data-theme="dark"] .task-item__checklist-item svg {
+  color: #4a4f57;
+}
+
+.app-shell[data-theme="dark"] .task-item__checklist-item--done {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .task-item__checklist-item--done svg {
+  color: #4fd18a;
+}
+
+.app-shell[data-theme="dark"] .task-item__progress-bar {
+  background: #2a2d34;
+}
+
+.app-shell[data-theme="dark"] .task-item__progress-fill {
+  background: #5b9bd5;
+}
+
+.app-shell[data-theme="dark"] .task-item__progress-label,
+.app-shell[data-theme="dark"] .task-item__detail-note {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .task-item__locate {
+  background: #20242a;
+  border-color: #33373e;
+  color: #d3d5d9;
+}
+
+.app-shell[data-theme="dark"] .task-item__locate:hover {
+  background: #262a30;
+}
+
+.app-shell[data-theme="dark"] .activity-item__avatar {
+  background: #3d6fd6;
+}
+
+.app-shell[data-theme="dark"] .activity-item__avatar--system {
+  background: #565a63;
+}
+
+.app-shell[data-theme="dark"] .activity-item__name {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .activity-item__time {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .activity-item__text {
+  color: #c2c4c9;
+}
+
+.app-shell[data-theme="dark"] .activity-item__attachment {
+  background: #1e2c3e;
+  color: #7bb2e6;
+}
+
+.app-shell[data-theme="dark"] .activity-item__timeline {
+  border-left-color: #33373e;
+}
+
+.app-shell[data-theme="dark"] .activity-item__timeline-dot {
+  background: #5b9bd5;
+  border-color: #191c21;
+}
+
+.app-shell[data-theme="dark"] .activity-item__timeline-label {
+  color: #d3d5d9;
+}
+
+.app-shell[data-theme="dark"] .activity-item__timeline-time {
+  color: #767b84;
+}
+
+/* Otto bar */
+
+.app-shell[data-theme="dark"] .otto-bar {
+  background: #1c1f24;
+  border-color: #2d3138;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.app-shell[data-theme="dark"] .otto-bar__chevron {
+  color: #8f939b;
+}
+
+.app-shell[data-theme="dark"] .otto-bar__chevron:hover {
+  background: #262a30;
+}
+
+.app-shell[data-theme="dark"] .otto-bar__input {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .otto-bar__input::placeholder {
+  color: #8f939b;
+}
+
+.app-shell[data-theme="dark"] .otto-results {
+  background: #1c1f24;
+  border-color: #2d3138;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.app-shell[data-theme="dark"] .otto-results__item:hover {
+  background: #262a30;
+}
+
+.app-shell[data-theme="dark"] .otto-results__type {
+  background: #2d3138;
+  color: #a3a7ae;
+}
+
+.app-shell[data-theme="dark"] .otto-results__type--command {
+  background: rgba(61, 111, 214, 0.22);
+  color: #7aa6ff;
+}
+
+.app-shell[data-theme="dark"] .otto-results__label {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .otto-results__location,
+.app-shell[data-theme="dark"] .otto-results__empty {
+  color: #8f939b;
+}
+
+.app-shell[data-theme="dark"] .otto-suggestions {
+  background: #1c1f24;
+  border-color: #2d3138;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.app-shell[data-theme="dark"] .otto-suggestions__label {
+  color: #4fd18a;
+}
+
+.app-shell[data-theme="dark"] .otto-suggestion-chip {
+  background: #20242a;
+  border-color: #2d3138;
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .otto-suggestion-chip:hover {
+  background: #262a30;
+  border-color: #3a3e45;
+}
+
+/* Info / rack detail panel */
+
+.app-shell[data-theme="dark"] .info-panel {
+  background: rgba(28, 31, 36, 0.98);
+}
+
+.app-shell[data-theme="dark"] .info-panel dt {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .info-panel dd {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .env-hud,
+.app-shell[data-theme="dark"] .heatmap-legend {
+  background: rgba(28, 31, 36, 0.96);
+  color: #d3d5d9;
+}
+
+.app-shell[data-theme="dark"] .env-hud:hover {
+  background: rgba(38, 42, 48, 0.98);
+}
+
+.app-shell[data-theme="dark"] .env-hud > svg,
+.app-shell[data-theme="dark"] .env-hud__stat svg {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .env-hud__status {
+  background: #163326;
+  color: #4fd18a;
+}
+
+.app-shell[data-theme="dark"] .env-hud-popover {
+  background: #20242a;
+  border-color: #33373e;
+  color: #d3d5d9;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.app-shell[data-theme="dark"] .env-hud-popover__title,
+.app-shell[data-theme="dark"] .env-hud-popover__cracs-label,
+.app-shell[data-theme="dark"] .env-hud-range__ends {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .env-hud-range__label {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .env-hud-range__value {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .env-hud-range__track {
+  background: #2a2d34;
+}
+
+.app-shell[data-theme="dark"] .env-hud-range__band {
+  background: #204030;
+}
+
+.app-shell[data-theme="dark"] .env-hud-range__marker {
+  background: #4fd18a;
+  border-color: #20242a;
+}
+
+.app-shell[data-theme="dark"] .env-hud-sparkline {
+  color: #5b9bd5;
+}
+
+.app-shell[data-theme="dark"] .env-hud-popover__cracs {
+  border-top-color: #33373e;
+}
+
+.app-shell[data-theme="dark"] .env-hud-popover__crac-row {
+  color: #d3d5d9;
+}
+
+.app-shell[data-theme="dark"] .env-hud-popover__crac-value--warn {
+  color: #d99a4e;
+}
+
+/* Port panel / node map */
+
+.app-shell[data-theme="dark"] .node-map__title {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .node-map__empty {
+  color: #767b84;
+}
+
+.app-shell[data-theme="dark"] .node-map__detail {
+  border-top-color: #262a30;
+}
+
+.app-shell[data-theme="dark"] .node-map__detail-header {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .port-summary {
+  color: #b4b7bd;
+}
+
+.app-shell[data-theme="dark"] .port-summary__pct {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .port-summary__temp {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .port-cell--free,
+.app-shell[data-theme="dark"] .port-legend__dot--free {
+  background: #33373e;
+  border-color: #43474e;
+}
+
+.app-shell[data-theme="dark"] .port-legend {
+  border-bottom-color: #262a30;
+}
+
+.app-shell[data-theme="dark"] .port-legend__item {
+  color: #b4b7bd;
+}
+
+.app-shell[data-theme="dark"] .port-list__row {
+  color: #d3d5d9;
+}
+
+.app-shell[data-theme="dark"] .port-list__port {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .port-list__speed {
+  color: #767b84;
+}
+
+/* Home page */
+
+.app-shell[data-theme="dark"] .top-bar__title-btn--static h1 {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .home-summary-stat {
+  background: #1c1f24;
+  border-color: #2d3138;
+}
+
+.app-shell[data-theme="dark"] .home-summary-stat__value {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .home-summary-stat--warn .home-summary-stat__value {
+  color: #e5484d;
+}
+
+.app-shell[data-theme="dark"] .home-summary-stat--ok .home-summary-stat__value {
+  color: #4fd18a;
+}
+
+.app-shell[data-theme="dark"] .home-summary-stat__label {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .home-page__section-title {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card {
+  background: #1c1f24;
+  border-color: #2d3138;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.app-shell[data-theme="dark"] .home-hall-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.app-shell[data-theme="dark"] .home-hall-card__racks,
+.app-shell[data-theme="dark"] .home-hall-card__env {
+  color: #8f939b;
+}
+
+.app-shell[data-theme="dark"] .home-status-badge--critical {
+  background: rgba(229, 72, 77, 0.22);
+  color: #ff9498;
+}
+
+.app-shell[data-theme="dark"] .home-status-badge--attention {
+  background: rgba(224, 134, 44, 0.22);
+  color: #f5a742;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card__name {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card__location {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card__fault {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card__fault--warn {
+  color: #e85a5f;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card--critical .home-hall-card__icon {
+  color: #ff9498;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card--attention .home-hall-card__icon {
+  color: #f5a742;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card--normal .home-hall-card__icon {
+  color: #4fd18a;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card__env--warn {
+  color: #f5a742;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card__divider {
+  background: #2d3138;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card__capacity-label,
+.app-shell[data-theme="dark"] .home-hall-card__capacity-pct {
+  color: #8f939b;
+}
+
+.app-shell[data-theme="dark"] .home-hall-card__capacity-bar {
+  background: #33373e;
+}
+
+/* Capacity page */
+
+.app-shell[data-theme="dark"] .capacity-page__intro {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .capacity-table {
+  background: #1c1f24;
+  border-color: #2d3138;
+}
+
+.app-shell[data-theme="dark"] .capacity-table__head {
+  background: #20242a;
+  border-color: #2d3138;
+  color: #8f939b;
+}
+
+.app-shell[data-theme="dark"] .capacity-row {
+  border-color: #2d3138;
+}
+
+.app-shell[data-theme="dark"] .capacity-row:hover {
+  background: #262a30;
+}
+
+.app-shell[data-theme="dark"] .capacity-row__name {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .capacity-row__location,
+.app-shell[data-theme="dark"] .capacity-metric__detail {
+  color: #8f939b;
+}
+
+.app-shell[data-theme="dark"] .capacity-metric__bar {
+  background: #33373e;
+}
+
+.app-shell[data-theme="dark"] .capacity-metric__label {
+  color: #8f939b;
+}
+
+/* Compare page */
+
+.app-shell[data-theme="dark"] .compare-page__intro {
+  color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .compare-grid {
+  background: #1c1f24;
+  border-color: #2d3138;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.app-shell[data-theme="dark"] .compare-grid__vs,
+.app-shell[data-theme="dark"] .compare-row__label {
+  color: #8f939b;
+}
+
+.app-shell[data-theme="dark"] .compare-grid__divider {
+  background: #2d3138;
+}
+
+.app-shell[data-theme="dark"] .compare-header__picker {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .compare-header__picker:hover {
+  color: #7aa6ff;
+}
+
+.app-shell[data-theme="dark"] .compare-header__location {
+  color: #8f939b;
+}
+
+.app-shell[data-theme="dark"] .compare-row__value {
+  color: #e8e9eb;
+}
+
+.app-shell[data-theme="dark"] .compare-row__value--winner {
+  color: #4fd18a;
+}
+
+.app-shell[data-theme="dark"] .compare-row__value-text--warn {
+  color: #f5a742;
+}
+
+.app-shell[data-theme="dark"] .compare-row__winner-icon {
+  color: #4fd18a;
+}
