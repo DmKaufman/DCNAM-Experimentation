@@ -6,9 +6,13 @@ export default function TopBar({ sites, currentSite, onSelectSite, darkMode, onT
   return (
     <header className="top-bar">
       <div className="top-bar__crumbs">
-        <span className="top-bar__crumb-muted">SOW</span>
-        <span className="top-bar__chevron">›</span>
-        <span className="top-bar__crumb-muted">···</span>
+        {page !== "home" && page !== "capacity" && page !== "compare" && (
+          <>
+            <span className="top-bar__crumb-muted">SOW</span>
+            <span className="top-bar__chevron">›</span>
+            <span className="top-bar__crumb-muted">···</span>
+          </>
+        )}
         {page === "home" || page === "capacity" || page === "compare" ? (
           <div className="top-bar__title-row">
             <div className="top-bar__title-btn top-bar__title-btn--static">
