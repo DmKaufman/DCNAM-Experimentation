@@ -7,6 +7,7 @@ import ComparePage from "./components/ComparePage";
 import ViewerCard from "./components/ViewerCard";
 import TaskPanel from "./components/TaskPanel";
 import ActivityPanel from "./components/ActivityPanel";
+import ActivityLog from "./components/ActivityLog";
 import OttoBar from "./components/OttoBar";
 import { SITES, buildSearchIndex, buildPlaceIndex, buildHallOverviews } from "./scene/data";
 import "./App.css";
@@ -61,6 +62,9 @@ export default function App() {
   // Import data state
   const [showImportHome, setShowImportHome] = useState(false);
 
+  // Activity log state
+  const [showActivityLog, setShowActivityLog] = useState(false);
+
   // Flattened once up front — cheap (no ports/positions, just id/label
   // derivation) so it's safe to build for the whole fleet regardless of
   // how many halls that ends up being.
@@ -102,6 +106,7 @@ export default function App() {
           onToggleDarkMode={() => setDarkMode((d) => !d)}
           page={page}
           onImport={() => setShowImportHome(true)}
+          onActivityToggle={() => setShowActivityLog((s) => !s)}
         />
 
         {page === "home" ? (
@@ -138,6 +143,8 @@ export default function App() {
           onNavigate={setPage}
         />
       </div>
+
+      {showActivityLog && <ActivityLog onClose={() => setShowActivityLog(false)} />}
     </div>
   );
 }

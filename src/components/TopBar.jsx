@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function TopBar({ sites, currentSite, onSelectSite, darkMode, onToggleDarkMode, page = "viewer", onImport }) {
+export default function TopBar({ sites, currentSite, onSelectSite, darkMode, onToggleDarkMode, page = "viewer", onImport, onActivityToggle }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -59,14 +59,13 @@ export default function TopBar({ sites, currentSite, onSelectSite, darkMode, onT
       </div>
 
       <div className="top-bar__actions">
-        <button className="icon-btn" title="Attach" aria-label="Attach">
-          <ClipIcon />
-        </button>
-        <button className="icon-btn" title="Activity" aria-label="Activity">
+        <button
+          className="icon-btn"
+          title="Activity log"
+          aria-label="Activity log"
+          onClick={onActivityToggle}
+        >
           <PulseIcon />
-        </button>
-        <button className="icon-btn" title="Edit" aria-label="Edit">
-          <PencilIcon />
         </button>
         <button
           className="icon-btn"
