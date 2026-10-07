@@ -561,12 +561,17 @@
 .app-shell[data-theme="dark"] .home-summary-stat:hover {
   background: #272d34;
   border-color: #3d4451;
+  transform: translateY(-2px);
+}
+
+.app-shell[data-theme="dark"] .home-summary-stat:active {
+  animation: cardClick 0.6s ease;
 }
 
 .app-shell[data-theme="dark"] .home-summary-stat--active {
   background: #0c2e4a;
-  border-color: #0F62FE;
-  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+  border: 2px solid #0F62FE;
+  box-shadow: 0 4px 12px rgba(15, 98, 254, 0.3);
 }
 
 .app-shell[data-theme="dark"] .home-summary-stat__value {
