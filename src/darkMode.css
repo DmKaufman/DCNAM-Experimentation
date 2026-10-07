@@ -136,6 +136,19 @@
   background: #d1383d;
 }
 
+.app-shell[data-theme="dark"] .top-bar__import-btn {
+  background: #0ea5e9;
+}
+
+.app-shell[data-theme="dark"] .top-bar__import-btn:hover {
+  background: #0284c7;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.4);
+}
+
+.app-shell[data-theme="dark"] .top-bar__import-btn:active {
+  background: #0570b8;
+}
+
 /* Viewer card */
 
 .app-shell[data-theme="dark"] .viewer-card {

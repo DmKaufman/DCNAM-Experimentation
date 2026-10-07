@@ -58,6 +58,9 @@ export default function App() {
   // component needing to know anything about rack/PDU/CRAC data itself.
   const [pendingLocate, setPendingLocate] = useState(null);
 
+  // Import data state
+  const [showImportHome, setShowImportHome] = useState(false);
+
   // Flattened once up front — cheap (no ports/positions, just id/label
   // derivation) so it's safe to build for the whole fleet regardless of
   // how many halls that ends up being.
@@ -98,10 +101,11 @@ export default function App() {
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode((d) => !d)}
           page={page}
+          onImport={() => setShowImportHome(true)}
         />
 
         {page === "home" ? (
-          <HomePage onSelectHall={handleSelectHall} overviews={hallOverviews} />
+          <HomePage onSelectHall={handleSelectHall} overviews={hallOverviews} showImport={showImportHome} onImportToggle={setShowImportHome} />
         ) : page === "capacity" ? (
           <CapacityPage onSelectHall={handleSelectHall} overviews={hallOverviews} />
         ) : page === "compare" ? (

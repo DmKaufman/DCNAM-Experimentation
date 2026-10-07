@@ -37,9 +37,8 @@ function buildHallSummaries(overviews) {
   return rows;
 }
 
-export default function HomePage({ onSelectHall, overviews }) {
+export default function HomePage({ onSelectHall, overviews, showImport, onImportToggle }) {
   const [filter, setFilter] = useState(null); // null | "attention" | "faults"
-  const [showImport, setShowImport] = useState(false);
 
   const halls = useMemo(() => buildHallSummaries(overviews), [overviews]);
   const totalFaults = useMemo(() => halls.reduce((sum, h) => sum + h.faultCount, 0), [halls]);
@@ -55,19 +54,14 @@ export default function HomePage({ onSelectHall, overviews }) {
   if (showImport) {
     return (
       <div className="home-page">
-        <DataImportPanel onImportComplete={() => setShowImport(false)} />
-        <button className="home-page__back-btn" onClick={() => setShowImport(false)}>← Back to Dashboard</button>
+        <DataImportPanel onImportComplete={() => onImportToggle?.(false)} />
+        <button className="home-page__back-btn" onClick={() => onImportToggle?.(false)}>← Back to Dashboard</button>
       </div>
     );
   }
 
   return (
     <div className="home-page">
-      <div className="home-page__toolbar">
-        <button className="home-page__import-btn" onClick={() => setShowImport(true)}>
-          📤 Import Data
-        </button>
-      </div>
       <div className="home-page__summary">
         <SummaryStat value={buildingCount} label="Buildings" onClick={() => setFilter(null)} />
         <SummaryStat value={halls.length} label="Halls" onClick={() => setFilter(null)} />

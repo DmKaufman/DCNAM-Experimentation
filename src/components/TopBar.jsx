@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function TopBar({ sites, currentSite, onSelectSite, darkMode, onToggleDarkMode, page = "viewer" }) {
+export default function TopBar({ sites, currentSite, onSelectSite, darkMode, onToggleDarkMode, page = "viewer", onImport }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -77,11 +77,12 @@ export default function TopBar({ sites, currentSite, onSelectSite, darkMode, onT
           {darkMode ? <SunIcon /> : <MoonIcon />}
         </button>
         <span className="top-bar__divider" />
-        <button className="pill-btn">
-          Create <ChevronDown />
-        </button>
-        <button className="pill-btn">Save</button>
-        <button className="pill-btn pill-btn--dark">Update</button>
+        {page === "home" && (
+          <button className="top-bar__import-btn" onClick={onImport} title="Import data">
+            <UploadIcon />
+            Import Data
+          </button>
+        )}
         <button className="icon-btn" title="More" aria-label="More">
           <KebabIcon />
         </button>
@@ -188,6 +189,14 @@ function ChevronUp() {
   return (
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
       <path d="M6 15l6-6 6 6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function UploadIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M12 19V5M5 12l7-7 7 7" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }

@@ -11,7 +11,8 @@
       "Skill(schedule:*)",
       "Bash(python3)",
       "Bash(npm install *)",
-      "Bash(git commit -m 'Add flexible CSV/Excel data import feature *)"
+      "Bash(git commit -m 'Add flexible CSV/Excel data import feature *)",
+      "Bash(git commit -m 'Improve TopBar: remove placeholder buttons, add styled Import Data button *)"
     ]
   }
 }
