@@ -1224,15 +1224,15 @@
 }
 
 .home-hall-card--critical {
-  border-left-color: #DA1E28;
+  border-left-color: #D0D0D0;
 }
 
 .home-hall-card--attention {
-  border-left-color: #e0862c;
+  border-left-color: #D0D0D0;
 }
 
 .home-hall-card--normal {
-  border-left-color: #24A148;
+  border-left-color: #D0D0D0;
 }
 
 .home-hall-card__top {
@@ -1251,18 +1251,21 @@
 }
 
 .home-status-badge--critical {
-  background: rgba(229, 72, 77, 0.12);
-  color: #bc3237;
+  background: transparent;
+  color: #DA1E28;
+  font-weight: 700;
 }
 
 .home-status-badge--attention {
-  background: rgba(224, 134, 44, 0.15);
-  color: #935b26;
+  background: transparent;
+  color: #8D8D8D;
+  font-weight: 700;
 }
 
 .home-status-badge--normal {
-  background: #e7f5ee;
-  color: #1c7c56;
+  background: transparent;
+  color: #24A148;
+  font-weight: 700;
 }
 
 .home-hall-card__racks {
@@ -1281,19 +1284,19 @@
 
 .home-hall-card__icon {
   flex-shrink: 0;
-  color: #9599a1;
+  color: #8D8D8D;
 }
 
 .home-hall-card--critical .home-hall-card__icon {
-  color: #bc3237;
+  color: #8D8D8D;
 }
 
 .home-hall-card--attention .home-hall-card__icon {
-  color: #935b26;
+  color: #8D8D8D;
 }
 
 .home-hall-card--normal .home-hall-card__icon {
-  color: #1c7c56;
+  color: #8D8D8D;
 }
 
 .home-hall-card__location {

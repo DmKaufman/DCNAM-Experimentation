@@ -634,13 +634,15 @@
 }
 
 .app-shell[data-theme="dark"] .home-status-badge--critical {
-  background: rgba(229, 72, 77, 0.22);
-  color: #ff9498;
+  background: transparent;
+  color: #DA1E28;
+  font-weight: 700;
 }
 
 .app-shell[data-theme="dark"] .home-status-badge--attention {
-  background: rgba(224, 134, 44, 0.22);
-  color: #f5a742;
+  background: transparent;
+  color: #A8A8A8;
+  font-weight: 700;
 }
 
 .app-shell[data-theme="dark"] .home-hall-card__name {
@@ -660,15 +662,15 @@
 }
 
 .app-shell[data-theme="dark"] .home-hall-card--critical .home-hall-card__icon {
-  color: #ff9498;
+  color: #A8A8A8;
 }
 
 .app-shell[data-theme="dark"] .home-hall-card--attention .home-hall-card__icon {
-  color: #f5a742;
+  color: #A8A8A8;
 }
 
 .app-shell[data-theme="dark"] .home-hall-card--normal .home-hall-card__icon {
-  color: #4fd18a;
+  color: #A8A8A8;
 }
 
 .app-shell[data-theme="dark"] .home-hall-card__env--warn {
