@@ -545,6 +545,17 @@
   border-color: #2d3138;
 }
 
+.app-shell[data-theme="dark"] .home-summary-stat:hover {
+  background: #272d34;
+  border-color: #3d4451;
+}
+
+.app-shell[data-theme="dark"] .home-summary-stat--active {
+  background: #0c2e4a;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
 .app-shell[data-theme="dark"] .home-summary-stat__value {
   color: #e8e9eb;
 }
@@ -559,6 +570,14 @@
 
 .app-shell[data-theme="dark"] .home-summary-stat__label {
   color: #a8acb3;
+}
+
+.app-shell[data-theme="dark"] .home-page__clear-filter {
+  color: #0ea5e9;
+}
+
+.app-shell[data-theme="dark"] .home-page__clear-filter:hover {
+  color: #38bdf8;
 }
 
 .app-shell[data-theme="dark"] .home-page__section-title {

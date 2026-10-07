@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { SITES, classifyHallCapacity } from "../scene/data";
 
 // Same ASHRAE-style band used elsewhere (EnvironmentHud) — a hall whose
@@ -37,24 +37,47 @@ function buildHallSummaries(overviews) {
 }
 
 export default function HomePage({ onSelectHall, overviews }) {
+  const [filter, setFilter] = useState(null); // null | "attention" | "faults"
+
   const halls = useMemo(() => buildHallSummaries(overviews), [overviews]);
   const totalFaults = useMemo(() => halls.reduce((sum, h) => sum + h.faultCount, 0), [halls]);
   const needsAttention = useMemo(() => halls.filter((h) => h.status !== "normal").length, [halls]);
   const buildingCount = SITES.length;
 
+  const filteredHalls = useMemo(() => {
+    if (filter === "attention") return halls.filter((h) => h.status !== "normal");
+    if (filter === "faults") return halls.filter((h) => h.faultCount > 0);
+    return halls;
+  }, [halls, filter]);
+
   return (
     <div className="home-page">
       <div className="home-page__summary">
-        <SummaryStat value={buildingCount} label="Buildings" />
-        <SummaryStat value={halls.length} label="Halls" />
-        <SummaryStat value={needsAttention} label="Need attention" tone={needsAttention > 0 ? "warn" : "ok"} />
-        <SummaryStat value={totalFaults} label="Faulted racks" tone={totalFaults > 0 ? "warn" : "ok"} />
+        <SummaryStat value={buildingCount} label="Buildings" onClick={() => setFilter(null)} />
+        <SummaryStat value={halls.length} label="Halls" onClick={() => setFilter(null)} />
+        <SummaryStat
+          value={needsAttention}
+          label="Need attention"
+          tone={needsAttention > 0 ? "warn" : "ok"}
+          onClick={() => setFilter("attention")}
+          active={filter === "attention"}
+        />
+        <SummaryStat
+          value={totalFaults}
+          label="Faulted racks"
+          tone={totalFaults > 0 ? "warn" : "ok"}
+          onClick={() => setFilter("faults")}
+          active={filter === "faults"}
+        />
       </div>
 
-      <h2 className="home-page__section-title">Halls ranked by attention needed</h2>
+      <h2 className="home-page__section-title">
+        {filter === "attention" ? "Halls needing attention" : filter === "faults" ? "Halls with faulted racks" : "Halls ranked by attention needed"}
+        {filter && <button className="home-page__clear-filter" onClick={() => setFilter(null)}>Clear filter</button>}
+      </h2>
 
       <div className="home-page__grid">
-        {halls.map((h) => (
+        {filteredHalls.map((h) => (
           <button
             key={`${h.siteId}-${h.hallId}`}
             className={`home-hall-card home-hall-card--${h.status}`}
@@ -102,12 +125,15 @@ export default function HomePage({ onSelectHall, overviews }) {
   );
 }
 
-function SummaryStat({ value, label, tone }) {
+function SummaryStat({ value, label, tone, onClick, active }) {
   return (
-    <div className={`home-summary-stat${tone ? ` home-summary-stat--${tone}` : ""}`}>
+    <button
+      className={`home-summary-stat${tone ? ` home-summary-stat--${tone}` : ""}${active ? " home-summary-stat--active" : ""}`}
+      onClick={onClick}
+    >
       <div className="home-summary-stat__value">{value}</div>
       <div className="home-summary-stat__label">{label}</div>
-    </div>
+    </button>
   );
 }
 
