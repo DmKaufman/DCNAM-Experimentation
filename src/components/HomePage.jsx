@@ -94,7 +94,6 @@ export default function HomePage({ onSelectHall, overviews, showImport, onImport
             onClick={() => onSelectHall(h.siteId, h.hallId)}
           >
             <div className="home-hall-card__top">
-              <StatusBadge status={h.status} />
               <span className="home-hall-card__racks">{h.rackCount} racks</span>
             </div>
 
@@ -147,9 +146,6 @@ function SummaryStat({ value, label, tone, onClick, active }) {
   );
 }
 
-function StatusBadge({ status }) {
-  return <span className={`home-status-badge home-status-badge--${status}`}>{STATUS_LABEL[status]}</span>;
-}
 
 function BuildingIcon() {
   return (

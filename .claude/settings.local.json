@@ -29,7 +29,8 @@
       "Bash(git commit -m 'Add interactive Activity Log panel *)",
       "Bash(git commit -m 'Add prominent animations to stat card filtering *)",
       "Bash(git commit -m 'Refine color palette for mature, professional appearance *)",
-      "Bash(git commit -m 'Remove decorative left borders from hall cards *)"
+      "Bash(git commit -m 'Remove decorative left borders from hall cards *)",
+      "Bash(git commit -m 'Remove status badges from hall cards *)"
     ]
   }
 }

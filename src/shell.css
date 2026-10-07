@@ -1229,33 +1229,6 @@
   justify-content: space-between;
 }
 
-.home-status-badge {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  padding: 3px 8px;
-  border-radius: 999px;
-}
-
-.home-status-badge--critical {
-  background: transparent;
-  color: #DA1E28;
-  font-weight: 700;
-}
-
-.home-status-badge--attention {
-  background: transparent;
-  color: #8D8D8D;
-  font-weight: 700;
-}
-
-.home-status-badge--normal {
-  background: transparent;
-  color: #24A148;
-  font-weight: 700;
-}
-
 .home-hall-card__racks {
   font-size: 11px;
   color: #8D8D8D;
