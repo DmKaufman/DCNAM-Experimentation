@@ -1206,7 +1206,6 @@
   text-align: left;
   background: #fff;
   border: 1px solid #E8E8E8;
-  border-left: 4px solid #d8d8d5;
   border-radius: 12px;
   padding: 16px 18px;
   cursor: pointer;
@@ -1223,17 +1222,6 @@
   transform: translateY(-1px);
 }
 
-.home-hall-card--critical {
-  border-left-color: #D0D0D0;
-}
-
-.home-hall-card--attention {
-  border-left-color: #D0D0D0;
-}
-
-.home-hall-card--normal {
-  border-left-color: #D0D0D0;
-}
 
 .home-hall-card__top {
   display: flex;
