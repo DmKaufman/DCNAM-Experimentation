@@ -12,7 +12,20 @@
       "Bash(python3)",
       "Bash(npm install *)",
       "Bash(git commit -m 'Add flexible CSV/Excel data import feature *)",
-      "Bash(git commit -m 'Improve TopBar: remove placeholder buttons, add styled Import Data button *)"
+      "Bash(git commit -m 'Improve TopBar: remove placeholder buttons, add styled Import Data button *)",
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "Bash(sed -i 's/#0ea5e9/#0F62FE/g' shell.css darkMode.css styles/DataImportPanel.css)",
+      "Bash(sed -i 's/#0284c7/#002D9C/g' shell.css darkMode.css styles/DataImportPanel.css)",
+      "Bash(sed -i 's/#0570b8/#0353E9/g' shell.css darkMode.css styles/DataImportPanel.css)",
+      "Bash(sed -i 's/#f4f4f2/#F4F4F4/g' shell.css)",
+      "Bash(sed -i 's/#fafaf8/#F4F4F4/g' shell.css)",
+      "Bash(sed -i 's|#0ea5e9|#0F62FE|g' shell.css darkMode.css styles/DataImportPanel.css)",
+      "Bash(sed -i 's|#0284c7|#002D9C|g' shell.css darkMode.css styles/DataImportPanel.css)",
+      "Bash(sed -i 's|#0570b8|#0353E9|g' shell.css darkMode.css styles/DataImportPanel.css)",
+      "Bash(sed -i 's|#f4f4f2|#F4F4F4|g' shell.css)",
+      "Bash(sed -i 's|#fafaf8|#F4F4F4|g' shell.css)",
+      "Bash(git commit -m 'Apply ServiceNow Horizon 2.0 design system *)"
     ]
   }
 }

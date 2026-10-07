@@ -127,8 +127,8 @@
 }
 
 .app-shell[data-theme="dark"] .pill-btn--danger {
-  background: #e5484d;
-  border-color: #e5484d;
+  background: #DA1E28;
+  border-color: #DA1E28;
   color: #fff;
 }
 
@@ -137,16 +137,16 @@
 }
 
 .app-shell[data-theme="dark"] .top-bar__import-btn {
-  background: #0ea5e9;
+  background: #0F62FE;
 }
 
 .app-shell[data-theme="dark"] .top-bar__import-btn:hover {
-  background: #0284c7;
+  background: #002D9C;
   box-shadow: 0 2px 8px rgba(14, 165, 233, 0.4);
 }
 
 .app-shell[data-theme="dark"] .top-bar__import-btn:active {
-  background: #0570b8;
+  background: #0353E9;
 }
 
 /* Viewer card */
@@ -257,7 +257,7 @@
 }
 
 .app-shell[data-theme="dark"] .task-item__checklist-item svg {
-  color: #4a4f57;
+  color: #525252;
 }
 
 .app-shell[data-theme="dark"] .task-item__checklist-item--done {
@@ -565,7 +565,7 @@
 
 .app-shell[data-theme="dark"] .home-summary-stat--active {
   background: #0c2e4a;
-  border-color: #0ea5e9;
+  border-color: #0F62FE;
   box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
 }
 
@@ -574,7 +574,7 @@
 }
 
 .app-shell[data-theme="dark"] .home-summary-stat--warn .home-summary-stat__value {
-  color: #e5484d;
+  color: #DA1E28;
 }
 
 .app-shell[data-theme="dark"] .home-summary-stat--ok .home-summary-stat__value {
@@ -586,7 +586,7 @@
 }
 
 .app-shell[data-theme="dark"] .home-page__clear-filter {
-  color: #0ea5e9;
+  color: #0F62FE;
 }
 
 .app-shell[data-theme="dark"] .home-page__clear-filter:hover {
@@ -594,15 +594,15 @@
 }
 
 .app-shell[data-theme="dark"] .home-page__import-btn {
-  background: #0ea5e9;
+  background: #0F62FE;
 }
 
 .app-shell[data-theme="dark"] .home-page__import-btn:hover {
-  background: #0284c7;
+  background: #002D9C;
 }
 
 .app-shell[data-theme="dark"] .home-page__back-btn {
-  color: #0ea5e9;
+  color: #0F62FE;
 }
 
 .app-shell[data-theme="dark"] .home-page__back-btn:hover {

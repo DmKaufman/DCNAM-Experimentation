@@ -1,6 +1,6 @@
 .data-import-panel {
   background: #fff;
-  border: 1px solid #e5e5e3;
+  border: 1px solid #E8E8E8;
   border-radius: 12px;
   padding: 24px;
   max-width: 600px;
@@ -37,8 +37,8 @@
 }
 
 .data-import-panel__close:hover {
-  background: #f4f4f2;
-  color: #1a1a1a;
+  background: #F4F4F4;
+  color: #161616;
 }
 
 .data-import-panel__error {
@@ -72,7 +72,7 @@
 
 .import-step__upload {
   display: block;
-  border: 2px dashed #d5d5d2;
+  border: 2px dashed #D0D0D0;
   border-radius: 8px;
   padding: 32px;
   text-align: center;
@@ -82,8 +82,8 @@
 }
 
 .import-step__upload:hover {
-  border-color: #0ea5e9;
-  background: #f0f9ff;
+  border-color: #0F62FE;
+  background: #E8F4FE;
 }
 
 .import-step__upload input {
@@ -119,12 +119,12 @@
 .mapping-label {
   font-size: 13px;
   font-weight: 600;
-  color: #4a4f57;
+  color: #525252;
 }
 
 .mapping-row select {
   padding: 8px;
-  border: 1px solid #d5d5d2;
+  border: 1px solid #D0D0D0;
   border-radius: 6px;
   font-size: 13px;
   font-family: inherit;
@@ -142,16 +142,16 @@
 }
 
 .preview-table th {
-  background: #f4f4f2;
+  background: #F4F4F4;
   padding: 8px;
   text-align: left;
   font-weight: 600;
-  border-bottom: 1px solid #e5e5e3;
+  border-bottom: 1px solid #E8E8E8;
 }
 
 .preview-table td {
   padding: 8px;
-  border-bottom: 1px solid #e5e5e3;
+  border-bottom: 1px solid #E8E8E8;
 }
 
 .preview-table__more {
@@ -208,21 +208,21 @@
 }
 
 .btn-primary {
-  background: #0ea5e9;
+  background: #0F62FE;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: #0284c7;
+  background: #002D9C;
 }
 
 .btn-secondary {
-  background: #e5e5e3;
-  color: #1a1a1a;
+  background: #E8E8E8;
+  color: #161616;
 }
 
 .btn-secondary:hover {
-  background: #d5d5d2;
+  background: #D0D0D0;
 }
 
 /* Dark mode */
@@ -255,7 +255,7 @@
 }
 
 [data-theme="dark"] .import-step__upload:hover {
-  border-color: #0ea5e9;
+  border-color: #0F62FE;
   background: #0c2e4a;
 }
 
